@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>Let's Rock — digital-агенство</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<link href="./style.css" rel="stylesheet" type="text/css" title="compact">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/easing.js"></script>
+	<script type="text/javascript" src="./js/slides.js"></script>
+	<script type="text/javascript" src="./js/dynamic.js"></script>
+	<script type="text/javascript">
+		function preload(arrayOfImages) {
+			$(arrayOfImages).each(function(){
+				$('<img>')[0].src = this;
+			});
+		}
+		preload([
+			'./images/bg1.jpg',
+			'./images/bg2.jpg',
+			'./images/bg3.jpg',
+			'./images/bg4.jpg',
+			'./images/bg5.jpg'
+		]);
+		$(document).ready(function() {
+			$('body').prepend('<div class="loading"><div></div></div>');
+			$('.loading > div').delay(500).stop(true, true).fadeIn(500);
+		});
+		$(window).load(function() {
+			$('.loading').stop(true, true).fadeOut(500);
+		});
+	</script>
+</head>
+<body>
+	<div class="wrapper page1">
+		<div class="top">
+			<img src="./images/logo.png" class="logo" width="442" height="109" alt="">
+			<p class="slogan">— Сайт? Легко!</p>
+			<p class="name">digital-агентство</p>
+			<ul class="social">
+				<li><a href="#" class="twitter"></a></li>
+				<li><a href="#" class="vkontakte"></a></li>
+				<li><a href="#" class="facebook"></a></li>
+			</ul>
+		</div>
+		<div class="panel">
+			<p class="consultant"><a href="#">Онлайн консультант</a></p>
+			<p class="city">
+				<span id="krasnodar">Краснодар</span>
+				<strong class="krasnodar">+7 (4934) 56-36-85</strong>
+				<strong class="barnaul">+7 (3852) 58-35-70</strong>
+				<span id="barnaul">Барнаул</span>
+			</p>
+			<p class="order"><a href="#">Форма заказа</a></p>
+		</div>
+		<ul class="menu">
+			<li><a href="./portfolio.html" class="page">Портфолио</a></li>
+			<li><a href="#">Продающие сайты</a></li>
+			<li><a href="#">Продвижение с оплатой за результат</a></li>
+			<li><a href="#">Техподдержка</a></li>
+			<li><a href="./team.html" class="page">Команда</a></li>
+			<li><a href="./contacts.html" class="page">Контакты</a></li>
+			<li><a href="./blog.html" class="page">Блог</a></li>
+		</ul>
+		<ul class="benefits">
+			<li>
+				<h2><a href="#">Продающие сайты</a></h2>
+				<p>Мы используем лучшие базы западных дизайнов и искренне уверены, что не во всех случаях разработки корпоративных сайтов стоит изобретать велосипед, а намного удобнее воспользоваться готовым решением от крупнейших игроков этой отрасли в мире. Главная черта таких сайтов — нацеленность на результат — эффективное представление товара или услуги в стильном дизайне.</p>
+			</li>
+			<li>
+				<h2><a href="#">Продвижение с оплатой за результат</a></h2>
+				<p>Мы используем лучшие базы западных дизайнов и искренне уверены, что не во всех случаях разработки корпоративных сайтов стоит изобретать велосипед, а намного удобнее воспользоваться готовым решением от крупнейших игроков этой отрасли в мире. Главная черта таких сайтов — нацеленность на результат — эффективное представление товара или услуги в стильном дизайне.</p>
+			</li>
+		</ul>
+		<div class="list">
+			<ul>
+				<li>
+					<img src="./images/some1.jpg" alt="">
+					<p><em><strong><a href="#">AltayResort</a></strong> <a href="#">http://altayresort.ru/</a></em></p>
+				</li>
+				<li>
+					<img src="./images/some2.jpg" alt="">
+					<p><em><strong><a href="#">Ышты</a></strong> <a href="#">http://site.ru</a></em></p>
+				</li>
+				<li>
+					<img src="./images/some3.jpg" alt="">
+					<p><em><strong><a href="#">ГОСТ деталь</a></strong> <a href="#">http://site.ru</a></em></p>
+				</li>
+			</ul>
+			<button><span>смотреть все портфолио</span></button>
+		</div>
+	</div>
+	<div class="fade"></div>
+	<div class="popup">
+	
+	</div>
+</body>
+</html>
