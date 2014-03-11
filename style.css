@@ -307,6 +307,19 @@ button::-moz-focus-inner {
 	text-align:center;
 	margin:0 auto 30px;
 }
+.list h2 {
+	color:#ffffff;
+	font-size:24px;
+	line-height:27px;
+	font-weight:normal;
+    font-family:'Gnuolane', sans-serif;
+	text-align:left;
+	text-transform:uppercase;
+	letter-spacing:-1px;
+	padding:0;
+	margin:0 53px -4px;
+	border:1px solid transparent;
+}
 .list ul {
 	padding:18px 0;
 	margin:0 0 20px;
@@ -940,4 +953,104 @@ div.page5 {
 @keyframes spin {
     from {transform:rotate(0deg);}
     to {transform:rotate(360deg);}
+}
+
+.intro {
+	clear:both;
+	overflow:hidden;
+	width:852px;
+	padding:0 54px;
+	padding:0 0 51px;
+	margin:0 auto 32px;
+	background:url('./images/intro_line.png') repeat-x bottom;
+}
+.intro .offer {
+	float:left;
+	width:380px;
+}
+.intro .offer h2 {
+	color:#ffffff;
+	font-size:24px;
+	line-height:27px;
+	font-weight:normal;
+    font-family:'Gnuolane', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:-1px;
+	padding:0;
+	margin:0 0 22px;
+}
+.intro .offer ul {
+	padding:12px 20px 26px 21px;
+	margin:0 0 20px;
+	background:url('./images/intro_offer_div.png') repeat;
+}
+.intro .offer ul li {
+	color:#ffffff;
+	font-size:16px;
+	line-height:24px;
+	font-style:italic;
+	padding:0 0 0 20px;
+	margin:24px 0 0;
+	background:url('./images/intro_offer_li.png') no-repeat left 13px;
+}
+.intro .offer ul li:first-child {
+	margin-top:0;
+}
+.intro .offer ul li a {
+	color:#ffffff;
+}
+.intro .information {
+	float:right;
+	width:380px;
+}
+.intro .information .showreel {
+	margin:0 0 26px;
+}
+.intro .information .showreel h2 {
+	color:#ffffff;
+	font-size:24px;
+	line-height:27px;
+	font-weight:normal;
+    font-family:'Gnuolane', sans-serif;
+	text-align:center;
+	text-transform:uppercase;
+	letter-spacing:-1px;
+	padding:0;
+	margin:0 0 22px;
+}
+.intro .information .newblog {
+	margin:0 0 20px;
+}
+.intro .information .newblog h2 {
+	color:#ffffff;
+	font-size:24px;
+	line-height:27px;
+	font-weight:normal;
+    font-family:'Gnuolane', sans-serif;
+	text-transform:uppercase;
+	letter-spacing:-1px;
+	padding:0 0 0 29px;
+	margin:0 0 11px;
+	background:url('./images/intro_newblog_icon.png') no-repeat left top;
+}
+.intro .information .newblog > div {
+	margin:0 0 11px;
+}
+.intro .information .newblog > div p {
+	color:#ffffff;
+	font-size:16px;
+	line-height:20px;
+	font-style:italic;
+	margin:0 0 6px;
+}
+.intro .information .newblog > div p a {
+	color:#ffffff;
+}
+.intro .information .newblog > div h6 {
+	color:#993366;
+	font-size:12px;
+	line-height:15px;
+	font-style:italic;
+	font-weight:normal;
+	margin:0 0 6px;
 }
