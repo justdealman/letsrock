@@ -82,25 +82,31 @@
 		$(this).parent().addClass('active');
 		return false;
 	});
-	$('.soldiers > div > div > div').append('<span></span>');
-	$('.soldiers').each(function() {
-		var size = $(this).children('div').children('div').size();
-		$(this).append('<ul></ul>');
-		for ( var i = 1; i < size+1; i++ ) {
-			$(this).find('ul').append('<li><a href="#"></a></li>');
-		}
-		$(this).children('div').children('div:first').fadeIn(0);
-		$(this).find('ul li:first').addClass('active');
+	$('.soldiers > div').slides({
+		generatePagination: true,
+		generateNextPrev: false,
+		container: 'container',
+		effect: 'slide',
+		slideSpeed: 500,
+		slideEasing: 'easeInOutQuint',
+		play: 0
 	});
-	$('.soldiers ul li a').bind('click', function() {
-		var current = $(this).parent().index()+1;
-		$(this).parents('.soldiers').children('div').children('div').hide();
-		$(this).parents('.soldiers').children('div').children('div:nth-child('+current+')').show();
-		$(this).parent().siblings().removeClass('active');
-		$(this).parent().addClass('active');
+	$('.greatsuccess > div').slides({
+		generatePagination: false,
+		generateNextPrev: true,
+		container: 'container',
+		effect: 'slide',
+		slideSpeed: 500,
+		slideEasing: 'easeInOutQuint',
+		play: 0
+	});
+	$('.soldiers > div > div > div').append('<span></span>');
+	$('.greatsuccess > div .next').text('Следующая история');
+	var gt = $('.greatsuccess').position().top-22;
+	$('.greatsuccess > div .next').click(function() {
+		$('.wrapper').animate({scrollTop:gt}, 500);
 		return false;
 	});
-	
 	$('.greatsuccess').each(function() {
 		$(this).children().children().filter(':first').show();
 	});
