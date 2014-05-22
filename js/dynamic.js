@@ -1,4 +1,14 @@
-﻿$(document).ready(function() {
+﻿function portfolioheight() {
+	var rh = $('.slider .information').height();
+	var height = $('.slider .container > div > div .picture img:visible').height()+80;
+	if ( height > rh ) {
+		$('.slider, .slider .container').css({'min-height': height+'px'});
+	}
+	else {
+		$('.slider, .slider .container').css({'min-height': rh+'px'});
+	}
+}
+$(document).ready(function() {
 	var tabs = $('.wrapper');
 	tabs.hide().filter(':first').show();
 	$('a.page').click(function () {
@@ -16,10 +26,11 @@
 		autoHeightSpeed: 0,
 		play: 0,
 		animationComplete: function() {
-			var height = $('.slider .container > div > div .picture img:visible').height()+80;
-			$('.slider, .slider .container').css({'min-height': height+'px'});
+			portfolioheight();
         }
 	});
+	portfolioheight();
+	$('.bubble > div').append('<span class="arrow"></span>');
 	$('.slider .container > div > div').each(function() {
 		var height = $(this).height();
 		$(this).parents('.slider, .container').height(height);
