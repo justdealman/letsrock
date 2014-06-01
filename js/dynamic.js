@@ -111,6 +111,11 @@ $(document).ready(function() {
 		slideEasing: 'easeInOutQuint',
 		play: 0
 	});
+	$('.advantages2 ul li .front > p').each(function() {
+		if ( $(this).height() == 60 ) {
+			$(this).css({'margin-top': '-9px'});
+		}
+	});
 	$('.soldiers > div > div > div').append('<span></span>');
 	$('.greatsuccess > div .next').text('Следующая история');
 	var gt = $('.greatsuccess').position().top-22;
